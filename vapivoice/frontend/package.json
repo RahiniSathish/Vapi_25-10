@@ -1,0 +1,24 @@
+{
+  "name": "attar-travel-vapi-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "React + Vite Vapi Voice Assistant with Flight Cards",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start-simple": "python -m http.server 5173"
+  },
+  "dependencies": {
+    "@vapi-ai/web": "^2.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}
