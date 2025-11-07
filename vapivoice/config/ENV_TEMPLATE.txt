@@ -1,0 +1,81 @@
+# ═══════════════════════════════════════════════════════════════
+# VAPI VOICE ASSISTANT - ENVIRONMENT VARIABLES TEMPLATE
+# ═══════════════════════════════════════════════════════════════
+
+Copy this to your .env file and fill in the missing values.
+
+# ---------------------------------------------------------------
+# VAPI CREDENTIALS
+# ---------------------------------------------------------------
+
+# Public Key (for frontend/client-side use) ✅ Already have this
+VAPI_PUBLIC_KEY=577ae6b3-53b9-4a37-b6f6-74e8e8808368
+
+# Private Key (for backend/server-side use) ⚠️ REQUIRED FOR MCP
+# Get this from: https://dashboard.vapi.ai → Settings → API Keys
+VAPI_PRIVATE_KEY=sk_your_private_key_here
+
+# Assistant ID ✅ Already have this
+VAPI_ASSISTANT_ID=e1c04a87-a8cf-4438-a91b-5888f69d1ef2
+
+# ---------------------------------------------------------------
+# KEY DIFFERENCES
+# ---------------------------------------------------------------
+
+VAPI_PUBLIC_KEY (pk_...):
+  ✅ Use: Frontend/Client-side JavaScript
+  ✅ Safe to expose in browser
+  ✅ Purpose: Start calls, connect to assistant
+  ❌ Cannot: Access MCP server
+
+VAPI_PRIVATE_KEY (sk_...):
+  ✅ Use: Backend/Server-side Python
+  ⚠️ NEVER expose in frontend
+  ✅ Purpose: MCP connection, server API access
+  ✅ Required for: MCP server real-time communication
+
+# ---------------------------------------------------------------
+# HOW TO GET VAPI_PRIVATE_KEY
+# ---------------------------------------------------------------
+
+1. Go to: https://dashboard.vapi.ai
+2. Navigate to: Settings → API Keys
+3. Look for: "Private API Key" or "Server Token"
+4. Copy the key that starts with: sk_...
+5. Paste it in your .env file as VAPI_PRIVATE_KEY
+
+# ---------------------------------------------------------------
+# COMPLETE .env FILE STRUCTURE
+# ---------------------------------------------------------------
+
+# VAPI
+VAPI_PUBLIC_KEY=577ae6b3-53b9-4a37-b6f6-74e8e8808368
+VAPI_PRIVATE_KEY=sk_your_private_key_here
+VAPI_ASSISTANT_ID=e1c04a87-a8cf-4438-a91b-5888f69d1ef2
+
+# OpenAI
+OPENAI_API_KEY=your_openai_key_here
+
+# Deepgram
+DEEPGRAM_API_KEY=your_deepgram_key_here
+
+# Bright Data (Optional - for real-time flights)
+BRIGHTDATA_USERNAME=your_username
+BRIGHTDATA_PASSWORD=your_password
+BRIGHTDATA_HOST=brd.superproxy.io
+BRIGHTDATA_PORT=33335
+
+# Email
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+SENDER_EMAIL=your_email@gmail.com
+SENDER_NAME=Attar Travel
+
+# URLs
+BACKEND_URL=http://localhost:4000
+FRONTEND_URL=http://localhost:8080
+
+# ═══════════════════════════════════════════════════════════════
+
